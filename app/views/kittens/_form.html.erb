@@ -1,34 +1,46 @@
+<h1>Create Kitten</h1>
+
 <%= form_with model: kitten do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    <%  kitten.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+  <oL>
+    <div>
+      <li>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+        <%  kitten.errors.messages_for(:name).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </li>
+    </div>
 
-  <div>
-    <%= form.label :age %>
-    <%= form.number_field :age %>
-    <%  kitten.errors.full_messages_for(:age).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div>
+      <li>
+        <%= form.label :age %>
+        <%= form.number_field :age %>
+        <%  kitten.errors.messages_for(:age).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </li>
+    </div>
 
-  <div>
-    <%= form.label :cuteness %>
-    <%= form.number_field :cuteness %>
-    <%  kitten.errors.full_messages_for(:cuteness).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div>
+      <li>
+        <%= form.label :cuteness %>
+        <%= form.number_field :cuteness %>
+        <%  kitten.errors.messages_for(:cuteness).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </li>
+    </div>
 
-  <div>
-    <%= form.label :softness %>
-    <%= form.number_field :softness %>
-    <%  kitten.errors.full_messages_for(:softness).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div>
+      <li>
+        <%= form.label :softness %>
+        <%= form.number_field :softness %>
+        <%  kitten.errors.messages_for(:softness).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </li>
+    </div>
+  </oL>
   <%= form.submit %>
 <% end %>
