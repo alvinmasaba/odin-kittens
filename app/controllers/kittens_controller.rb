@@ -1,4 +1,4 @@
-class KittensController < ActionController::Base
+class KittensController < ApplicationController
   def index
     @kittens = Kitten.all
   end
@@ -40,7 +40,7 @@ class KittensController < ActionController::Base
 
     @kitten.destroy
 
-    redirect_to root, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   private

@@ -9,5 +9,6 @@
 
 <div>
   <div><%= link_to "Home", root_path %></div>
-  <div><%= link_to "Delete Kitten", kitten_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></div>
+  <div><%= link_to "Edit Kitten", edit_kitten_path(@kitten) %></div>
+  <div><%= link_to "Delete Kitten", kitten_path(@kitten), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></div>
 </div>
